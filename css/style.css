@@ -1,0 +1,12 @@
+header {
+    background-color: lightsalmon;
+    justify-content: space-between;
+    height: 100px;
+    width: 600px;
+}
+.name-burger input{
+    border: none;
+}
+.burger img {
+    width: 100%;
+}
