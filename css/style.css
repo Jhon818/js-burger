@@ -1,12 +1,103 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 header {
-    background-color: lightsalmon;
+    background-color: #F2B54D;
     justify-content: space-between;
     height: 100px;
     width: 600px;
+    position: relative;
 }
 .name-burger input{
     border: none;
 }
-.burger img {
-    width: 100%;
+.burger{
+    position: absolute;
+    width: 30%;
+    right: -5%;
+    top: -25%;
 }
+
+.ingredients span:last-child {
+    color:#F9395E;
+    font-weight: 600;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+.checkbox .checkmark {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-color:#F9395E ;
+    border: none;
+} 
+
+.checkbox input:checked ~ .checkmark {
+    background-color: #F9395E;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+    opacity:1;
+}
+
+
+.checkbox .checkmark::after {
+    position: absolute;
+    content: "";
+    left: 12px;
+    top: 12px;
+    height: 0px;
+    width: 0px;
+    border-radius: 5px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(0deg) scale(0);
+    -ms-transform: rotate(0deg) scale(0);
+    transform: rotate(0deg) scale(0);
+    opacity:1;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+
+.checkbox input:checked ~ .checkmark::after {
+  -webkit-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+  opacity:1;
+  left: 4px;
+  top: -3px;
+  width: 10px;
+  height: 15px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  border-radius: 0;
+}
+
+
+
+
+  .calculate button{
+      background: #F2B54D;
+      border-radius: 10px;
+      padding: 8px 20px 8px 20px;
+  }
+
+  footer {
+      background: #F9395E;
+      width: 540px;
+  }
