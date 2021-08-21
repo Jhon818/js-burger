@@ -18,6 +18,18 @@ header {
 .name-burger input{
     border: none;
 }
+
+.name-burger input:hover{
+   background-color: #F2B54D;
+}
+.coupons input {
+    border: none;
+}
+
+.coupons input:hover {
+    background-color:#F2B54D ;
+}
+
 .burger{
     position: absolute;
     width: 30%;
@@ -97,7 +109,12 @@ input[type="checkbox"] {
       padding: 8px 20px 8px 20px;
   }
 
+  .calculate button:hover{
+      background-color: #FDBB40;
+  }
+
   footer {
       background: #F9395E;
       width: 540px;
   }
+  
