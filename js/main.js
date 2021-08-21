@@ -1,10 +1,8 @@
 // prezzo fisso del panino
 var price = document.getElementById("price").value = 50;
 var burgerName = document.getElementById("name-burger");
-var coupon = [
-    "fwohfowhfwohf123",
-    "ddajdsajdps123"
-];
+var coupon = document.getElementById("coupon").value;
+
 var sale = 0.9;
 var button = document.getElementById("btn");
 // prezzo lista ingredienti
@@ -20,18 +18,22 @@ ketchup : document.getElementById("ketchup").value.checked = 3,
 
 // aggiunta al prezzo al click del bottone
 function check() {
-    if (ingredients.cheese.checked == true) {
-        ingredient = ingredients[key];
-        return parseInt(ingredient);
+    for (var key in ingredients) {
+        if (Object.hasOwnProperty.call(ingredients, key)) {
+            ingredient = ingredients[key];
+            return ingredient
+        }
     }
+       
+    
     
     }
-  
-button.addEventListener("click", priceCalc);
+ 
+button.addEventListener("click", priceCalc , check() , sales());
 
 
     function priceCalc() {
-        for (let key in ingredients) {
+        for (let ingredient in ingredients) {
             ingredient = check();
         if (burgerName.value == "panino") {
             return ingredient;
@@ -44,13 +46,18 @@ button.addEventListener("click", priceCalc);
             }
         }
 
-  
-
-    document.getElementById("price").innerHTML = price + priceCalc();
-
-    // if (coupon === "fwohfowhfwohf123" || coupon === "ddajdsajdps123" ) {
-    //     price = price * sale;
-    // }
+    function sales() {
+        if (coupon == "nnfno123" || coupon == "ononno123" ) {
+            document.getElementById("price").innerHTML = price * sale;
+        }
+        else {
+            document.getElementById("price").innerHTML = price + priceCalc();
      
+        }
+    }
+
+   
+    
+    
         
 
