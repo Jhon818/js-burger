@@ -8,28 +8,89 @@ var button = document.getElementById("btn");
 // prezzo lista ingredienti
 
 let ingredients = {
-cheese : document.getElementById("cheese").value.checked = 2 ,
-lettuce : document.getElementById("lettuce").value.checked = 3,
-tomato : document.getElementById("tomato").value.checked = 1,
-egg : document.getElementById("egg").value.checked = 3,
-mustard : document.getElementById("mustard").value.checked = 5,
-ketchup : document.getElementById("ketchup").value.checked = 3,
-}
+'cheese' : document.getElementById("cheese").value.checked = 2 ,
+'lettuce' : document.getElementById("lettuce").value.checked = 3,
+'tomato' : document.getElementById("tomato").value.checked = 1,
+'egg' : document.getElementById("egg").value.checked = 3,
+'mustard' : document.getElementById("mustard").value.checked = 5,
+'ketchup' : document.getElementById("ketchup").value.checked = 3,
+};
 
 // aggiunta al prezzo al click del bottone
+
+    
+button.addEventListener("click", sales , priceCalc);
+
+
+
+
+// function add() {
+//   adds =  document.querySelector('input[type="checkbox"]:checked');
+//     if (adds == true) {
+        
+//         console.log(adds)
+   
+// }
+// }
+
+
+
 function check() {
-    for (var key in ingredients) {
-        if (Object.hasOwnProperty.call(ingredients, key)) {
-            ingredient = ingredients[key];
+    for (let key in ingredients) {
+var adds;
+x = 0;
+y = 0;
+        function add() {
+            if (document.getElementById("cheese").checked) {
+              x += ingredients.cheese;
+             }
+    
+            if (document.getElementById("lettuce").checked) {
+               x += ingredients.lettuce;
+                 
+              }
+
+              if (document.getElementById("tomato").checked) {
+                x += ingredients.tomato;
+             }
+
+              if (document.getElementById("egg").checked) {
+                x += ingredients.egg;
+                 
+           }
+
+              if (document.getElementById("mustard").checked) {
+                x += ingredients.mustard;
+                
+              }
+
+              if (document.getElementById("ketchup").checked) {
+                x += ingredients.ketchup;
+                 
+              }
+            //   if (document.querySelectorAll('input[type="checkbox"]:not(:checked)')) {
+            //     x = 20;
+            // }
+
+              else {
+                  x = -1;
+              }
+              
+              
+              adds = x + y;
+              return adds;
+    
+    }
+
+        if (ingredients[key] == true) {
+            ingredient = ingredients[key] + add();
             return ingredient
         }
     }
-       
     
     
     }
- 
-button.addEventListener("click", priceCalc , check() , sales());
+
 
 
     function priceCalc() {
@@ -37,7 +98,7 @@ button.addEventListener("click", priceCalc , check() , sales());
             ingredient = check();
         if (burgerName.value == "panino") {
             return ingredient;
-        }   
+        } 
         else {
             alert("Inserisci un nome al panino"); 
             break;
@@ -45,6 +106,9 @@ button.addEventListener("click", priceCalc , check() , sales());
             
             }
         }
+
+
+       
 
     function sales() {
         if (coupon == "nnfno123" || coupon == "ononno123" ) {
@@ -55,6 +119,8 @@ button.addEventListener("click", priceCalc , check() , sales());
      
         }
     }
+
+    
 
    
     
