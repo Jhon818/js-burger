@@ -112,7 +112,7 @@ y = 0;
 
     function sales() {
         if (coupon == "nnfno123" || coupon == "ononno123" ) {
-            document.getElementById("price").innerHTML = price * sale + priceCalc();
+            document.getElementById("price").innerHTML = price * sale + priceCalc() + " $";
         }
         else {
             document.getElementById("price").innerHTML = price + priceCalc();
