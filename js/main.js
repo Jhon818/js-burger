@@ -115,7 +115,7 @@ y = 0;
             document.getElementById("price").innerHTML = price * sale + priceCalc() + " $";
         }
         else {
-            document.getElementById("price").innerHTML = price + priceCalc();
+            document.getElementById("price").innerHTML = price + priceCalc() - 1;
      
         }
     }
