@@ -82,7 +82,7 @@ y = 0;
     
     }
 
-        if (ingredients[key] == true) {
+        if (document.querySelectorAll('input[type="checkbox"]:not(:checked)')) {
             ingredient = ingredients[key] + add();
             return ingredient
         }
@@ -112,7 +112,7 @@ y = 0;
 
     function sales() {
         if (coupon == "nnfno123" || coupon == "ononno123" ) {
-            document.getElementById("price").innerHTML = price * sale;
+            document.getElementById("price").innerHTML = price * sale + priceCalc();
         }
         else {
             document.getElementById("price").innerHTML = price + priceCalc();

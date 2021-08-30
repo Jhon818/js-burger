@@ -78,11 +78,6 @@ input[type="checkbox"] {
     -ms-transform: rotate(0deg) scale(0);
     transform: rotate(0deg) scale(0);
     opacity:1;
-    transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
 }
 
 
